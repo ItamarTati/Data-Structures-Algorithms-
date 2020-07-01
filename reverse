@@ -1,0 +1,5 @@
+var reverse = function(x) {    
+    let reversed = x.toString().split('').reverse().join('')
+    let answer = Math.sign(x) * parseInt(reversed) 
+    return answer > 0x7FFFFFFF || answer < -0x7FFFFFFF ? 0 : answer
+};
