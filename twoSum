@@ -1,0 +1,13 @@
+var twoSum = function(nums, target) {
+    let hashmap = {}
+    
+    for(let index = 0; index <= nums.length; index++){
+        let number = nums[index]
+        if(hashmap[target - number] !== undefined){
+            return [hashmap[target - number], index]
+        } 
+        hashmap[number] = index
+
+    }
+    return []
+};
