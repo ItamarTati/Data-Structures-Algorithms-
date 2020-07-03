@@ -1,0 +1,31 @@
+var romanToInt = function(s) {
+    let keymap = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C:100,
+        D:500,
+        M:1000
+        
+    }
+    let total = 0 
+    for(let index = 0; index < s.length; index++){
+        let currentInt = keymap[s.charAt(index)]   
+        let nextInt = keymap[s.charAt(index + 1)]
+        if (nextInt){
+            if(currentInt >= nextInt){    
+                total += currentInt;
+            } 
+            else {
+                total += ( nextInt - currentInt)
+                index++
+            }
+        } 
+        else {
+            total += currentInt
+        }
+    }
+    return total       
+    
+};
