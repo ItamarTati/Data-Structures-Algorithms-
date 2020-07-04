@@ -1,0 +1,10 @@
+var moveZeroes = function(nums) {
+    for (let index = nums.length - 1; index >= 0; index--){
+        let num = nums[index]
+        if (num === 0){
+            nums.splice(index, 1)
+            nums.push(num)
+        }
+    }
+    return nums
+};
