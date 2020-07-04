@@ -1,0 +1,11 @@
+var removeDuplicates = function(nums) {
+    for (let index = nums.length - 1; index >= 0; index--){
+        let currentNum = nums[index]
+        let secondNum = nums[index - 1]
+        let thirdNum = nums[index - 2]
+        if(currentNum === secondNum && currentNum === thirdNum){
+            nums.splice(index, 1)
+           }
+    }
+    return nums.length
+};
