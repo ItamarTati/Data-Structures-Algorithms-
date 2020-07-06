@@ -1,0 +1,18 @@
+var mostCommonWord = function(paragraph, banned) {
+    let hash = {}
+    let arrayOfWords = paragraph.split(/[ ';?:!,.]+/)
+    for(let index = 0; index < arrayOfWords.length; index++){
+        let word = arrayOfWords[index].toLowerCase()
+        if(hash[word] !== undefined){
+            hash[word] = hash[word] + 1
+        }
+        else{
+            hash[word] = 1
+        }
+        
+    }
+    banned.forEach(e => delete hash[e])
+    delete hash[''];
+    return Object.keys(hash).reduce((a, b) => hash[a] > hash[b] ? a : b)
+//     return hash
+};
