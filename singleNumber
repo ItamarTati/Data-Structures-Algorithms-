@@ -9,5 +9,5 @@ var singleNumber = function(nums) {
             hash[num] = 1
         }
     }
-    return Object.keys(hash).reduce((a, b) => hash[a] < hash[b] ? a : b)
+    return Object.keys(hash).reduce((accumulator, currentValue) => hash[accumulator] < hash[currentValue] ? accumulator : currentValue, 0)
 };
