@@ -1,0 +1,9 @@
+var missingNumber = function(nums) {
+   let answer = []
+   for(let num = 0; num <= nums.length; num++){
+       if(!nums.includes(num)){
+           answer.push(num)
+       }
+   }
+    return answer
+};
