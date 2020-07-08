@@ -1,0 +1,13 @@
+var majorityElement = function(nums) {
+    let hash = {}
+    for(let index = 0; index < nums.length; index++){
+        let num = nums[index]
+        if(hash[num] !== undefined){
+            hash[num] = hash[num] + 1
+        }
+        else {
+            hash[num] = 1
+        }
+    }
+    return Object.keys(hash).reduce((acc, curr) => hash[acc] > hash[curr] ? acc : curr)
+};
