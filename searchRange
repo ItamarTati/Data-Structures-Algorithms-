@@ -1,0 +1,22 @@
+var searchRange = function(nums, target) {
+    let answer = []
+    for(let index = 0; index < nums.length; index++){
+        let num = nums[index]
+        if(num === target){
+            answer.push(index)
+        } 
+    }
+    
+    if (answer.length === 1){
+       answer.push(answer[0]) 
+    }
+    
+    if (answer.length >= 2){
+        return [Math.min(...answer), Math.max(...answer)  ]
+    } 
+ 
+    else {
+        return [-1, -1] 
+    }
+        
+};
