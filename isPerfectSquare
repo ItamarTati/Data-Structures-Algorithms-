@@ -1,0 +1,8 @@
+var isPerfectSquare = function(num) {
+    for (let number = 0; number <= num; number++){       
+       if(number * number === num){
+           return true 
+       }
+   }
+    return false 
+};
