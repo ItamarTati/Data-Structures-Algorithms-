@@ -1,0 +1,13 @@
+var removeDuplicates = function(S) {
+    let arr = S.split('')
+    for(let index = 0; index < arr.length - 1; index++){
+       let currentLetter = arr[index]
+       let nextLetter = arr[index + 1]
+       if(currentLetter === nextLetter){
+            arr.splice(index, 2)
+            index -= 2
+            
+           }  
+    }
+    return arr.join('')
+};
