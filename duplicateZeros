@@ -1,0 +1,11 @@
+var duplicateZeros = function(arr) {
+   for(let index = 0; index < arr.length; index++){
+       let num = arr[index]
+       if(num === 0){
+           arr.splice(index, 0, 0)
+           arr.splice(-1, 1)
+           index++
+       }
+   }
+   return arr
+};
