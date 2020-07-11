@@ -1,0 +1,15 @@
+var diStringMatch = function(S) {
+    let answer = []
+    let N = S.length + 1
+    let secondN = -1
+    for (let index = 0; index <= S.length; index++){
+        if (S[index] === 'I'){
+            answer.push( secondN + 1)
+            secondN++
+        }else{
+            answer.push( N - 1)
+            N--           
+        }
+    }
+    return answer
+};
