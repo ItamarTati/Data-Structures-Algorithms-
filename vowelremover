@@ -1,0 +1,4 @@
+function vowelremover(string){
+  let re = /[aeiou]/g
+  return string.replace(re,'')
+}
