@@ -1,0 +1,7 @@
+var isPowerOfFour = function(num) {
+    let number = 1
+    while(number < num){
+        number *= 4
+    }
+    return number === num
+};
