@@ -1,0 +1,14 @@
+var numIdenticalPairs = function(nums) {
+    let hash = {        
+    }
+    
+    for(let index = 0; index < nums.length; index++){
+        if (hash[nums[index]] !== undefined){
+            hash[nums[index]] = hash[nums[index]] + 1
+        }
+            else{
+                hash[nums[index]] = 1
+            }
+    }
+        return Object.values(hash).map((num) => ((num * (num - 1))/2 )).reduce((acc, curr) => acc + curr, 0)
+};
