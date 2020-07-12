@@ -1,0 +1,13 @@
+var checkPossibility = function(nums) {
+    let modifications = 0; 
+    for(let index = 0; index < nums.length; index++){
+        if(nums[index] > nums[index + 1]){
+          if(nums[index - 1] > nums[index + 1]){
+               nums[index + 1] = nums[index]
+          }
+        modifications++
+        }
+        if (modifications > 1) return false;
+    }
+        return true
+};
