@@ -1,0 +1,9 @@
+var reformatDate = function(date) {
+    let month = {"Jan": '01', "Feb": '02', "Mar": '03', "Apr": '04', "May": '05', "Jun": '06', "Jul": '07', "Aug": '08', "Sep": '09', "Oct": '10', "Nov": '11', "Dec": '12'}   
+    let splitString = date.split(' ')
+    let regex = /[thndrs]/g
+    return splitString[0].replace(regex, '').length === 1 ? 
+        splitString[2]  + '-' + month[splitString[1]] + '-' + '0' + splitString[0].replace(regex, '')  :          
+        splitString[2]   + '-' + month[splitString[1]] + '-' + splitString[0].replace(regex, '') 
+
+};
