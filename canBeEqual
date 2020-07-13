@@ -1,0 +1,9 @@
+var canBeEqual = function(target, arr) {
+    arr.sort((a, b) => a - b)
+    for(let index = 0; index < target.length; index++){
+        if(target[index] !== arr[index]){
+            return false
+        }
+    }
+    return true 
+};
