@@ -1,0 +1,4 @@
+var average = function(salary) {
+    let size = salary.length - 2
+    return salary.sort((a, b) => b - a).splice(1, salary.length - 2).reduce((acc, curr) => acc + curr, 0) / size
+};
