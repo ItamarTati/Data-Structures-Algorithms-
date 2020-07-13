@@ -1,0 +1,17 @@
+var findLucky = function(arr) {
+    let hash = {}
+    let answer = []
+    for(let index = 0; index < arr.length; index++){
+        if(hash[arr[index]] !== undefined){
+            hash[arr[index]] = hash[arr[index]] + 1
+        } else {
+            hash[arr[index]] = 1
+        }
+    }
+    for (const property in hash) {
+        if(property == hash[property]){
+             answer.push(hash[property])
+        }
+    }
+    return answer.length === 0 ? -1 : Math.max(...answer)
+};
