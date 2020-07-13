@@ -1,0 +1,5 @@
+var numJewelsInStones = function(J, S) {   
+    var pattern = new RegExp('\[' + J + ']*', 'g')
+    return S.length - S.replace(pattern, "").length
+};
+
