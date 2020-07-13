@@ -1,0 +1,6 @@
+var thirdMax = function(nums) {
+    let sortedArray = nums.sort((a, b) =>  b - a)
+    let sortedArraySet = new Set(sortedArray)
+    let array = [...sortedArraySet];
+    return array.length > 2 ? array[2] : Math.max(...array)
+};
