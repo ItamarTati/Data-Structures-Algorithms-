@@ -1,0 +1,8 @@
+var smallerNumbersThanCurrent = function(nums) {
+    let answer = []
+    for(let index = 0; index < nums.length; index++){
+        let num = nums[index];
+        answer.push( nums.filter((n) => n < num).length )
+    }
+    return answer
+};
