@@ -1,0 +1,7 @@
+var firstMissingPositive = function(nums) {
+    for(let number = 1; number <= nums.length + 1; number++){
+        if (!nums.includes(number)){
+            return number
+        }
+    }
+};
