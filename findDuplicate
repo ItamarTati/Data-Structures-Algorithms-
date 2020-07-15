@@ -1,0 +1,11 @@
+var findDuplicate = function(nums) {
+    let hash = {}
+    for(let index = 0; index < nums.length; index++){
+        if(hash[nums[index]] !== undefined){
+            return nums[index]
+        }
+        else{
+            hash[nums[index]] = 1
+        }
+    }
+};
