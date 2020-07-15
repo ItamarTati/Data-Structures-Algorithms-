@@ -1,0 +1,19 @@
+var findErrorNums = function(nums) {
+    let hash = {}
+    let answer = []
+    for(let index = 0; index < nums.length; index++){
+        if(hash[nums[index]] !== undefined){
+            answer.push(nums[index]) 
+        }
+        else{
+            hash[nums[index]] = 1
+        }
+    }
+     for(let number = 1; number <=nums.length; number++){
+         if(!nums.includes(number)){
+             answer.push(number)
+         }
+     }
+    
+    return answer
+};
