@@ -1,0 +1,13 @@
+var buildArray = function(target, n) {
+    let answer = []
+    for(let number = 1; number <= Math.max(...target); number++){
+        if(target.includes(number)){
+            answer.push('Push')
+        }
+        else{
+            answer.push('Push')
+            answer.push('Pop')
+        }
+    }
+    return answer
+};
