@@ -1,0 +1,3 @@
+var addToArrayForm = function(A, K) {
+    return [...(BigInt(A.join('')) + BigInt(K) + '') ]
+};
