@@ -1,0 +1,3 @@
+var findNumbers = function(nums) {
+    return nums.map((num) => num.toString().length).filter((num) => num % 2 === 0).length
+};
