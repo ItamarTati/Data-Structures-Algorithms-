@@ -1,0 +1,13 @@
+var firstUniqChar = function(s) {
+    let hash = {}
+    for(let index = 0; index < s.length; index++){
+        if(hash[s[index]] !== undefined){
+            hash[s[index]] = -1
+        }
+        else{
+            hash[s[index]] = index
+        }
+    }
+    let answer = hash[Object.keys(hash).find((letter) => hash[letter] > -1 )] 
+    return answer === undefined ? -1 : answer
+};
