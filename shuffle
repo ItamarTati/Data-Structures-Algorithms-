@@ -1,0 +1,9 @@
+var shuffle = function(nums, n) {
+    let answer = []
+    for(let index = 0; index < n; index++){
+        answer.push(nums[index])
+        answer.push(nums[index + n])
+
+    }
+    return answer
+};
