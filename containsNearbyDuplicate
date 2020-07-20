@@ -1,0 +1,16 @@
+var containsNearbyDuplicate = function(nums, k) {
+    let hash = {}
+    for(let index = 0; index < nums.length; index++){
+        if(hash[nums[index]] !== undefined){
+             if (Math.abs(index - hash[nums[index]]) <= k){
+                 return true 
+             }
+             else{
+                 hash[nums[index]] = index
+             }
+        } else{
+            hash[nums[index]] = index
+        }
+    }
+    return false
+};
