@@ -1,0 +1,7 @@
+var decompressRLElist = function(nums) {
+    let answer = []
+    for(let index = 1; index < nums.length; index += 2){
+        answer.push(...new Array(nums[index - 1]).fill(nums[index]))
+    }
+    return answer
+};
