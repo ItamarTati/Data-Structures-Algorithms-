@@ -1,0 +1,17 @@
+var balancedStringSplit = function(s) {
+    let count = 0 
+    let balance = 0
+    for(let index = 0; index < s.length; index++){
+        if (balance === 0){
+            count++
+        }
+        
+        if(s[index] === 'R'){
+            balance++
+        }
+        else{
+            balance--
+        }
+    }
+    return count
+};
