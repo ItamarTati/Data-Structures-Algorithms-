@@ -1,0 +1,3 @@
+var findMaxConsecutiveOnes = function(nums) {
+    return nums.join('').split('0').reduce((max, ones) => Math.max(max, ones.length), 0);
+};
