@@ -1,0 +1,10 @@
+var countNegatives = function(grid) {
+    let answer = []
+    let index = grid.length - 1
+    
+    while(index >= 0){
+        answer.push(...grid[index].filter((number) => number < 0))       
+        index--
+    }
+    return answer.length
+};
