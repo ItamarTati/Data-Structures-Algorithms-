@@ -1,0 +1,7 @@
+function reverse(str){
+  let string = str.split(' ')
+  for(let index = 1; index < string.length; index += 2){
+    string[index] = string[index].split('').reverse().join('')   
+  }
+  return string.join(' ') !== '   ' ? string.join(' ') : ''
+}
