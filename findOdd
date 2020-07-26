@@ -1,0 +1,12 @@
+function findOdd(A) {
+  let hash = {}
+  for(let index = 0; index < A.length; index++){
+    let number = A[index]
+    if(hash[number] !== undefined){
+      hash[number] = hash[number] + 1
+    } else{
+       hash[number] = 1
+    }
+  }
+  return parseInt(Object.keys(hash).filter((string) => hash[string] % 2 === 1))
+  }
