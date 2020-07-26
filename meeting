@@ -1,0 +1,8 @@
+function meeting(s) {
+  let string = s.split(';')
+  for(let index = 0; index < string.length; index++){
+    let words = string[index].toUpperCase()
+    string[index] = '(' + words.split(':').reverse().join(', ') + ')'       
+  }
+  return string.sort().join('')
+}
