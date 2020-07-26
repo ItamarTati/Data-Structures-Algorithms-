@@ -1,0 +1,9 @@
+function solution(number){
+  let answer = []
+  for(let num = 1; num < number; num++){
+    if(num % 3 === 0 || num % 5 === 0){
+      answer.push(num)
+    }
+  }
+  return answer.reduce((acc, curr) => acc + curr, 0)
+}
