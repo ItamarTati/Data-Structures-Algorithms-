@@ -1,0 +1,7 @@
+var restoreString = function(s, indices) {
+    let answer = []
+    for(let index = 0; index < indices.length; index++){
+        answer[indices[index]] = s[index]                          
+    }
+    return answer.join('')
+};
