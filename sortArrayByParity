@@ -1,0 +1,3 @@
+var sortArrayByParity = function(A) {
+   return [...A.filter((num) => num % 2 === 0), ...A.filter((num) => num % 2 === 1)]
+};
