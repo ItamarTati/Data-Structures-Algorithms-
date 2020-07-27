@@ -1,0 +1,7 @@
+var xorOperation = function(n, start) {
+    let answer = []
+    for(let number = start; number <= start + ((n - 1) * 2); number+= 2){
+        answer.push(number)
+    }
+    return answer.reduce((acc, curr) => acc ^ curr, 0)
+};
