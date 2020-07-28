@@ -1,0 +1,3 @@
+function countWins(winnerList, country) {
+  return winnerList.filter((winner) => winner.country === country).length
+}
