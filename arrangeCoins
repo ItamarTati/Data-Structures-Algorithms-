@@ -1,0 +1,14 @@
+var arrangeCoins = function(n) {
+    if (n === 0){
+        return 0
+    }
+    let addBy = 1
+    let number = 0
+    let steps = 0
+    while(number <= n){
+        number = number + addBy
+        addBy++
+        steps++
+    }
+    return number === steps ? steps : steps - 1
+};
