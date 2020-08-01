@@ -1,0 +1,22 @@
+function sumFourDivisors(nums: number[]): number {
+    let divisors: number[] = [];
+    for(let index: number = 0; index < nums.length; index++){
+        let num: number = nums[index];
+        let posibleDivisors: number[] = []; 
+        let count: number = 0
+        for(let divisor: number = 0; divisor <= nums[index]; divisor++){
+            if( num % divisor === 0){
+                posibleDivisors.push(divisor);
+                count++;
+            }
+            if(count > 4){
+                break;
+            }
+        }
+        if (count === 4){
+            divisors.push(...posibleDivisors);
+        }
+        posibleDivisors = [];
+    }
+    return divisors.reduce((acc, curr) => acc + curr, 0);
+};
