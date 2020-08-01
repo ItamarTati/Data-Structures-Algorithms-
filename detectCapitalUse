@@ -1,14 +1,17 @@
-var detectCapitalUse = function(word) {
-    if(word.split('').every((letter) => letter === letter.toUpperCase())){
-        return true
+function detectCapitalUse(word: string): boolean {
+    let arrayOfWords: string[] = word.split('');
+    let firstWord: string = word[0];
+    let restOfWords: string[] = word.slice(1, word.length).split('');
+    if(arrayOfWords.every((letter: string) => letter === letter.toUpperCase())){
+        return true;
     }
-    if(word[0] === word[0].toUpperCase() && word.split('').splice(1, word.length - 1).every((letter) => letter === letter.toLowerCase())){
-        return true
+    if(arrayOfWords.every((letter: string) => letter === letter.toLowerCase())){
+        return true;
     }
-    if(word.split('').every((letter) => letter === letter.toLowerCase())){
-        return true
+    if(firstWord === firstWord.toUpperCase() && restOfWords.every((letter: string) => letter === letter.toLowerCase())){
+        return true; 
     }
-    else {
-        return false
-    }
+    
+    
+    return false;
 };
