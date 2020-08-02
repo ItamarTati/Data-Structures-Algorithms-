@@ -1,0 +1,14 @@
+function largestPerimeter(A: number[]): number {
+    let hash: object = {}
+        A.sort((a, b) => b - a)
+        for(let index: number = 0; index < A.length - 2; index++){
+            let num: number = A[index]
+            let secondNum: number = A[index + 1]
+            let thirdNum: number = A[index + 2]
+            if(num < secondNum + thirdNum){
+                return num + secondNum + thirdNum
+            }       
+        }
+    return 0
+    
+};
