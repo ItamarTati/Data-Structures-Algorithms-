@@ -1,0 +1,7 @@
+function lexicalOrder(n: number): number[] {
+    let answer: number[] = []
+    for(let num: number = 1; num <= n; num++){
+        answer.push(num)
+    }
+    return answer.sort()
+};
