@@ -1,5 +1,5 @@
-var isPalindrome = function(s) {
-   let regex = /[\W_]/g  
-   let lowerCaseReg = s.toLowerCase().replace(regex, '')
-   return lowerCaseReg === s.toLowerCase().replace(regex, '').split('').reverse().join('') 
+function isPalindrome(s: string): boolean {
+    let regex = /[\W_]/g
+    let lowerCaseRegex: string = s.toLowerCase().replace(regex, '')
+    return lowerCaseRegex === s.toLowerCase().replace(regex, '').split('').reverse().join('') 
 };
