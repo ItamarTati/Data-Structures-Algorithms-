@@ -1,0 +1,11 @@
+function findOcurrences(text: string, first: string, second: string): string[] {
+    let answer: string[] = []
+    let arrayOfString: string[] = text.split(' ')
+    for(let index: number = 0; index < arrayOfString.length - 2; index++){
+        let word: string = arrayOfString[index]
+        let nextWord: string = arrayOfString[index + 1]
+        let thirdWord: string = arrayOfString[index + 2]
+        if(word === first && nextWord === second) answer.push(thirdWord)        
+    }
+    return answer
+};
