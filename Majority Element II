@@ -1,0 +1,10 @@
+var majorityElement = function(nums) {
+    let hashmap = {}
+    for(let index = 0; index < nums.length; index++){
+        let num = nums[index]
+        if(hashmap[num] !== undefined) hashmap[num] = hashmap[num] + 1
+        else hashmap[num] = 1
+    }
+    let moreThanN = nums.length / 3
+    return Object.keys(hashmap).filter((n) => hashmap[n] > moreThanN)
+};
