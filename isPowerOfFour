@@ -1,5 +1,5 @@
-var isPowerOfFour = function(num) {
-    let number = 1
+function isPowerOfFour(num: number): boolean {
+    let number: number = 1
     while(number < num){
         number *= 4
     }
