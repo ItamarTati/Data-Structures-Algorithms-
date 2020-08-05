@@ -1,0 +1,8 @@
+var checkPerfectNumber = function(num) {
+    if (num === 0) return false 
+    let answer = []
+    for(let number = 1; number < num; number++ ){
+        if(num % number === 0) answer.push(number)
+    }
+    return answer.reduce((acc, curr) => acc + curr, 0) === num
+};
