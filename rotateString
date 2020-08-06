@@ -1,0 +1,15 @@
+var rotateString = function(A, B) {
+    if (B === "") return true
+    let rotates = A.length //5
+    let start = 0
+    let end = A.length - 1
+    while(rotates > 0){
+    let arrayOfStrings = A.split('')
+    arrayOfStrings.unshift(A[end])
+    arrayOfStrings.splice(A.length, 1)    
+    A = arrayOfStrings.join('')
+    rotates--
+    if(A === B) return true    
+    }
+    return false   
+};
