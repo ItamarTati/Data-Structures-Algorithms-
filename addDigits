@@ -1,0 +1,9 @@
+var addDigits = function(num) {
+    let stringNumber = num + ''
+    let count = 2
+    while(count > 1){
+        stringNumber = stringNumber.split('').reduce((acc, curr) => parseInt(acc) + parseInt(curr), 0) + ''
+        count = stringNumber.length
+    }
+    return parseInt(stringNumber) 
+};
