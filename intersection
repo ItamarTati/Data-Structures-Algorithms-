@@ -1,0 +1,10 @@
+function intersection(nums1: number[], nums2: number[]): number[] {
+    let answer: number[] = []
+    for(let index: number = 0; index < nums1.length; index++){
+        let num1: number = nums1[index]
+        if(nums2.includes(num1))(
+            answer.push(num1)
+        )
+    }
+    return [...new Set(answer)]
+};
