@@ -1,0 +1,9 @@
+var repeatedNTimes = function(A) {
+    let hashmap = {}
+    for(let index = 0; index < A.length; index++){
+        let number = A[index]
+        if(hashmap[number] !== undefined) hashmap[number] = hashmap[number] + 1        
+        else hashmap[number] = 1 
+    }
+    return Object.keys(hashmap).reduce((acc, curr) => hashmap[acc] > hashmap[curr] ? acc : curr, 0)
+};
