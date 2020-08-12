@@ -1,0 +1,20 @@
+var setZeroes = function(matrix) {
+    let indexs = []
+    for(let index = 0; index < matrix.length; index++){
+        let matrixRow = matrix[index]
+        for(let indexTwo = 0; indexTwo < matrixRow.length; indexTwo++){
+            let number = matrixRow[indexTwo]
+            let length = matrixRow.length
+            if(number === 0){
+                matrix[index] = new Array(length).fill(0)
+                indexs.push(indexTwo)            
+                }
+        }   
+    }
+    for(let index = 0; index < matrix.length; index++){
+        for(let indexTwo = 0; indexTwo < indexs.length; indexTwo++){
+            matrix[index][indexs[indexTwo]]= 0
+        }
+    } 
+    return matrix
+};
