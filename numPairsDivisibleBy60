@@ -1,0 +1,14 @@
+var numPairsDivisibleBy60 = function(time) {
+    let count = 0;
+    for(let index = 0; index < time.length; index++){
+        let song = time[index]
+        for(let secondIndex = index + 1; secondIndex < time.length; secondIndex++){
+            let secondSong = time[secondIndex]
+            if((song + secondSong) % 60 === 0 ){
+                count++
+            }
+        }
+    }
+
+    return count
+};
