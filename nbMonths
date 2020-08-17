@@ -1,0 +1,24 @@
+function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
+  if (startPriceOld > startPriceNew) return [0,startPriceOld-startPriceNew];
+
+  let month = 1;
+  let monthlyLoss = percentLossByMonth / 100;
+  let monthlySavings = savingperMonth;
+  let oldCarValue = startPriceOld - (startPriceOld * monthlyLoss);
+  let newCarValue = startPriceNew - (startPriceNew * monthlyLoss);
+  let totalSavings = oldCarValue + monthlySavings;
+  let totalRemaining = newCarValue - totalSavings;
+
+  while(totalRemaining>0) {
+    month++;
+    if(month%2==0) monthlyLoss += 0.005; // At end of every 2nd month, increase lost by 0.5%
+    monthlySavings += savingperMonth; // Earn money every month
+    oldCarValue = oldCarValue - (oldCarValue * monthlyLoss); // Reduce value of old car every month
+    newCarValue = newCarValue - (newCarValue * monthlyLoss); // Reduce value of old car every month
+    totalSavings = oldCarValue + monthlySavings;
+    totalRemaining = newCarValue - totalSavings;
+  }
+
+  // Return number of months saved and rounded absolute value of excess money
+  return [month, Math.round(Math.abs(totalRemaining))];
+}
