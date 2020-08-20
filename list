@@ -1,0 +1,15 @@
+function list(listofNames){
+  var theList = "";
+  var newList = "";
+  var finalList ="";
+
+  for (i in listofNames) {
+    
+    theList += listofNames[i].name + ", ";  
+
+      newList = theList.slice(0, -4)
+      finalList = newList.replace(/,\s(\w+)$/, " & $1");
+    }
+  
+  return finalList
+}
