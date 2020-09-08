@@ -1,0 +1,15 @@
+function add(num1, num2) {
+  let answer = ''
+  let array1 = num1.toString().split('').reverse()
+  let array2 = num2.toString().split('').reverse()
+  let maxLength = Math.max(array1.length, array2.length)
+  for(let index = 0; index < maxLength; index++){
+      if (array1[index] === undefined) array1[index] = '0'  
+      if (array2[index] === undefined) array2[index] = '0'
+      let string1 = array1[index]
+      let string2 = array2[index]
+      let addedvalue = parseInt(string1) + parseInt(string2)
+      answer =  addedvalue + answer
+  }
+    return parseInt(answer)
+}
