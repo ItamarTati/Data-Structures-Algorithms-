@@ -1,0 +1,9 @@
+var runningSum = function(nums) {
+    for(let index = 1; index < nums.length; index++){
+        let num = nums[index]
+        let lastNum = nums[index - 1]
+        nums[index] = num + lastNum
+    }
+    return nums
+    
+};
