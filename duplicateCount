@@ -1,10 +1,10 @@
 function duplicateCount(text){
-  text = text.toLowerCase()
-  let hashmap = {}
+  text = text.toLowerCase();
+  let hashmap = {};
   for(let index = 0; index < text.length; index++){
-    let Letter = text[index]
-    if(hashmap[Letter] !== undefined) hashmap[Letter] = hashmap[Letter] + 1
-    else hashmap[Letter] = 1
-  }
-  return Object.keys(hashmap).filter(letter => hashmap[letter] > 1).length
+    let Letter = text[index];
+    if(hashmap[Letter] !== undefined) hashmap[Letter] = hashmap[Letter] + 1;
+    else hashmap[Letter] = 1;
+  };
+  return Object.keys(hashmap).filter(letter => hashmap[letter] > 1).length;
 }
